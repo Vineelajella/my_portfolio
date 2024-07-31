@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="p.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <style>
+        /* Add CSS for hidden content */
+        .hidden-content {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .about-details {
+            margin-bottom: 20px;
+        }
+
+        .about-details h3 {
+            color: white;
+            font-size: 1.5em;
+        }
+
+        .about-details p {
+            font-size: 1em;
+            color: white;
+        }
+
+        .hidden-content a {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">Portfolio</a>
+        <div class="navbar">
+            <a href="#" style="color: aqua; font-weight: bold;" class="active">Home</a>
+            <a href="#about" style="--1:2">About</a>
+            <a href="#" style="--1:3">Skills</a>
+            <a href="#" style="--1:4">Portfolio</a>
+            <a href="#" style="--1:5">Contact</a>
+        </div>
+    </header>
+    <div class="home">
+        <div class="home-content">
+            <h3>Hello, It's Me</h3>
+            <h1>Vineela Jella</h1>
+            <h3>And I'm a <span class="text"></span></h3>
+            <p>Aspiring Web Developer | B.Tech Final Year Student at CBIT College</p>
+            <div class="home-sc1">
+                <a href="https://www.facebook.com/" style="--1:7"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/" style="--1:8"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/" style="--1:9"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://www.youtube.com/" style="--1:10"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <a href="#" class="More" id="moreAboutMeHomeBtn">More About Me</a>
+        </div>
+        <span class="home-navigator"></span>
+    </div>
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="WhatsApp Image 2024-07-13 at 10.28.27 AM.jpeg" class="img3">
+        </div>
+        <div class="about-text">
+            <h2>About <span> Me</span></h2>
+            <h4>Web Developer</h4>
+            <p>I am a passionate and innovative web developer with a good knowledge in front-end and back-end development. Currently pursuing my B.Tech in ECE at CBIT College, I am adept at creating efficient, scalable, and responsive web solutions. With hands-on experience in HTML, CSS, JavaScript, and frameworks like React and Node.js, I thrive on turning complex problems into simple, beautiful interfaces. My goal is to leverage my skills in web development to create meaningful and impactful digital experiences.</p>
+            <a href="#" class="More" id="moreAboutMeAboutBtn">More About Me</a>
+            
+            <!-- Hidden content for additional details -->
+            <div id="moreAboutMeContent" class="hidden-content">
+                <div class="about-details">
+                    <h3>Java Enthusiast</h3>
+                    <p>I am deeply passionate about Java programming with a strong theoretical foundation. I have a solid understanding of Java's core concepts, including object-oriented programming, data structures, and algorithms. My enthusiasm for Java drives me to continually explore and learn new aspects of the language. I am eager to apply my knowledge and contribute to innovative software solutions in the field.</p>
+                </div>
+                <div class="about-details">
+                    <h3>SQL Passion</h3>
+                    <p>I have a keen interest in SQL and database management. My proficiency in SQL enables me to design and manage databases effectively, ensuring data integrity and efficient query performance. I enjoy working with complex queries and optimizing database operations to enhance application performance.</p>
+                </div>
+                <div class="about-details">
+                    <h3>UI/UX Passion</h3>
+                    <p>With foundational skills in UI/UX design and proficiency in Figma, I focus on creating user-centered digital experiences. I am passionate about designing intuitive interfaces and effective visual communication, aiming to craft engaging web applications that provide a seamless user experience.</p>
+                </div>
+                <a href="#" class="More" id="lessAboutMeBtn">Less About Me</a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const moreAboutMeHomeBtn = document.getElementById('moreAboutMeHomeBtn');
+            const moreAboutMeAboutBtn = document.getElementById('moreAboutMeAboutBtn');
+            const moreAboutMeContent = document.getElementById('moreAboutMeContent');
+            const lessAboutMeBtn = document.getElementById('lessAboutMeBtn');
+
+            function showMoreAboutMe(event) {
+                event.preventDefault();
+                moreAboutMeContent.style.display = 'block';
+                moreAboutMeHomeBtn.style.display = 'none';
+                moreAboutMeAboutBtn.style.display = 'none';
+                lessAboutMeBtn.style.display = 'inline-block';
+            }
+
+            function showLessAboutMe(event) {
+                event.preventDefault();
+                moreAboutMeContent.style.display = 'none';
+                moreAboutMeHomeBtn.style.display = 'inline-block';
+                moreAboutMeAboutBtn.style.display = 'inline-block';
+                lessAboutMeBtn.style.display = 'none';
+            }
+
+            moreAboutMeHomeBtn.addEventListener('click', showMoreAboutMe);
+            moreAboutMeAboutBtn.addEventListener('click', showMoreAboutMe);
+            lessAboutMeBtn.addEventListener('click', showLessAboutMe);
+        });
+    </script>
+</body>
+</html>
