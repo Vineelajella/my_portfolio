@@ -55,7 +55,7 @@ body{
     width:100%;
     justify-content: space-between;
     height:100vh;
-    background:url(images/image.png);
+    background:url(image.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -207,8 +207,8 @@ body{
     letter-spacing: 1px;
     font-weight: 600;
     opacity:0;
-    animation: sliceTop .2s ease forwards;
-    animation-delay: 0.5s;
+    animation: sliceTop .5s ease forwards;
+    animation-delay: 1s;
     box-shadow: 0 0 5px aqua,
     
 
@@ -787,4 +787,203 @@ section{
         opacity: 1;
     }
     
+}
+/* Media Queries */
+@media (max-width: 1200px) {
+    .header {
+        padding: 20px 5%;
+    }
+
+    .home-content h1 {
+        font-size: 30px;
+    }
+
+    .home-content h3 {
+        font-size: 20px;
+    }
+
+    .navbar a {
+        font-size: 20px;
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    .home-content h1 {
+        font-size: 28px;
+    }
+
+    .home-content p {
+        font-size: 18px;
+    }
+
+    .services-list {
+        grid-template-columns: 1fr;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar {
+        margin-top: 10px;
+    }
+
+    .home-content h3 {
+        font-size: 18px;
+    }
+
+    .about-text h4 {
+        font-size: 20px;
+    }
+
+    .about-details h3 {
+        font-size: 20px;
+    }
+
+    .about-details p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 576px) {
+    .header {
+        padding: 10px 5%;
+    }
+
+    .home-content h1 {
+        font-size: 24px;
+    }
+
+    .home-content p {
+        font-size: 16px;
+    }
+
+    .services-list div {
+        padding: 20px;
+    }
+
+    .skills_section .title {
+        font-size: 30px;
+    }
+
+    .skill {
+        width: 100%;
+        height: auto;
+    }
+
+    .skill .progress {
+        width: 100%;
+    }
+}
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .contact-form form {
+        margin-top: 30px; /* Reduce top margin on smaller screens */
+    }
+
+    .contact-form form input,
+    .contact-form form textarea {
+        width: 90%; /* Full width on smaller screens */
+        font-size: 0.9rem; /* Slightly smaller font size for mobile */
+    }
+
+    .contact-form textarea {
+        height: 150px; /* Reduce height of textarea for mobile */
+    }
+
+    .contact-form form .send {
+        width: 100%; /* Full width for submit button on mobile */
+        font-size: 14px; /* Smaller font size for submit button */
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    .about {
+        grid-template-columns: 1fr; /* Stack content vertically */
+        text-align: center; /* Center align text on smaller screens */
+    }
+
+    .img3 {
+        margin-left: 0; /* Remove left margin */
+        margin: 0 auto; /* Center image */
+    }
+
+    .about-text h2 {
+        font-size: 28px; /* Adjust font size for heading */
+    }
+
+    .about-text h4 {
+        font-size: 22px; /* Adjust font size for subheading */
+    }
+
+    .about-text p {
+        font-size: 18px; /* Adjust font size for paragraph */
+    }
+
+    .More1 {
+        font-size: 15px; /* Adjust font size for button */
+        padding: 10px 15px; /* Adjust padding for button */
+    }
+}
+
+@media (max-width: 480px) {
+    .about-text h2 {
+        font-size: 24px; /* Further adjust font size for heading */
+    }
+
+    .about-text h4 {
+        font-size: 20px; /* Further adjust font size for subheading */
+    }
+
+    .about-text p {
+        font-size: 16px; /* Further adjust font size for paragraph */
+    }
+
+    .More1 {
+        font-size: 14px; /* Further adjust font size for button */
+    }
+
+    .about-details h3 {
+        font-size: 1.2em; /* Adjust font size for detail headings */
+    }
+
+    .about-details p {
+        font-size: 18px; /* Adjust font size for detail paragraphs */
+    }
+}
+@media (max-width: 480px) {
+    .contact-form form {
+        margin-top: 20px; /* Further reduce top margin for extra small screens */
+    }
+
+    .contact-form form input,
+    .contact-form form textarea {
+        font-size: 0.85rem; /* Further reduce font size */
+    }
+
+    .contact-form form .send {
+        font-size: 13px; /* Smaller font size for submit button */
+    }
+}
+
+
+@media (max-width: 480px) {
+    .contact-form form input,
+    .contact-form form textarea {
+        font-size: 0.6rem; /* Further reduce font size for very small screens */
+    }
+
+    .contact-form form .send {
+        font-size: 12px; /* Smaller font size for submit button */
+    }
 }
